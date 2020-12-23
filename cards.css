@@ -1,0 +1,534 @@
+* {
+    box-sizing: border-box;
+
+}
+
+
+body {
+    margin: 0;
+    background-image: url(Img/gridme/gridme.png);
+    background-repeat: repeat 0 0;
+    background-size: 50px 50px;
+    -webkit-animation: bg-scrolling-reverse .92s infinite; /* Safari 4+ */
+    -moz-animation:    bg-scrolling-reverse .92s infinite; /* Fx 5+ */
+    -o-animation:      bg-scrolling-reverse .92s infinite; /* Opera 12+ */
+    animation:         bg-scrolling-reverse .92s infinite; /* IE 10+ */
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function:    linear;
+    -o-animation-timing-function:      linear;
+    animation-timing-function:         linear;
+}
+
+/* BG Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+@-moz-keyframes    bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+@-o-keyframes      bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+@keyframes         bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+
+@-webkit-keyframes bg-scrolling {
+  0% { background-position: 50px 50px; }
+}
+@-moz-keyframes    bg-scrolling {
+  0% { background-position: 50px 50px; }
+}
+@-o-keyframes      bg-scrolling {
+  0% { background-position: 50px 50px; }
+}
+@keyframes         bg-scrolling {
+  0% { background-position: 50px 50px; }
+}
+
+
+
+
+
+
+
+.landing_page {
+    border: 1px solid black;
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    /* background-color: #43464b; */
+    
+}
+.landingheader {
+    border-top: 5px solid #999;
+    border-bottom: 5px solid #999;
+    text-align: center;
+    
+    font-family: 'Exo';
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-style: oblique;
+    color: #999;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 8%;
+}
+
+.buttontoplay {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(black, .5);
+    height: 150px;
+    color: rgb(255, 255, 255);
+    border: 10px solid #999;
+    background-color: rgba(153,153,153,0.6);
+    font-family: 'Exo';
+    box-shadow: 0 0 0 0 rgba(153, 153, 153, 0.7);
+    -webkit-animation: pulsing 1.5s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulsing 1.5s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulsing 1.5s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulsing 1.5s infinite cubic-bezier(0.66, 0, 0, 1);
+    cursor: pointer;
+    padding-top: 55px;
+    font-size: 20px;
+    font-style: oblique;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    }
+    /*animation for the buttons*/
+    /*give it the gold shadow and not full color shadow*/
+    @-webkit-keyframes pulsing {
+        to {
+          box-shadow: 0 0 0 30px rgba(232, 76, 61, 0); 
+        }
+      }
+      
+      @-moz-keyframes pulsing {
+        to {
+          box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
+        }
+      }
+      
+      @-ms-keyframes pulsing {
+        to {
+          box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
+        }
+      }
+      
+      @keyframes pulsing {
+        to {
+          box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
+        }
+      }
+
+ .game_page {
+     margin: 0;
+     height: 100vh;
+    
+     /* border: 1px solid black; */
+     position: relative;
+     /* background-color: #43464b; */
+ }
+ .together {
+    position: absolute;
+    /* border: 1px solid black; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+ }
+
+ .gamebackground {
+     /* border: 1px solid black; */
+     top: 55.5%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     position: absolute;
+ }
+
+.topcontainer {
+    border-top: 3px solid rgba(153, 153, 153, 0.74);
+    border-bottom: 3px solid rgba(153, 153, 153, 0.8);
+    margin: 0 auto;
+    margin-top: 15px;
+       
+}
+
+.topscorecontainer {
+    border: 4px solid #e7692e;
+    margin: 5px auto;
+    width: 70%;
+    text-align: center;
+    border-radius: 7px;
+    /* background-color: #43464b; */
+    color: rgb(117, 117, 117);
+    font-family: 'Exo';
+    letter-spacing: 4px;
+    font-style: oblique;
+    font-size: 20px;
+    font-weight: bolder;
+    
+}
+
+.mainbox {
+    grid-template-columns: repeat(2,3fr);
+    /* background-color: burlywood; */
+    /* border: 1px solid black; */
+    width: 100%;
+    margin-top: 30px;
+    height: 80%;
+    
+
+}
+
+.timer {
+    border: 5px solid #e7cb2e;
+    /* background-color: chocolate; */
+    width: 20%;
+    margin: 0px 0px 0px 70px;
+    margin-top: 20px;
+    padding: 5px;
+    text-align: center;
+    height: 40px;
+    font-family: 'Exo';
+    font-style: oblique;
+    background-color: #43464b;
+    color: whitesmoke;
+    letter-spacing: 1px;
+    font-weight: bold;
+    border-radius: 8px;
+
+}
+
+
+.container {
+    height: 1050px;
+    /* border: 1px solid black; */
+    /* background-color: chocolate; */
+    width: 800px;
+    margin: 10px 0px 0px 277px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    border: 5px solid rgba(153, 153, 153, 0.74);
+    border-radius: 10px;
+}
+
+.grid {
+    display: grid;
+}
+.flex {
+    display: flex;
+}
+
+.boxes {
+    /* border: 1px solid black; */
+    padding: 5px;
+}
+
+.stackerbox {
+    position: absolute;
+    /* border-radius: 10px;
+    border: 5px solid rgba(153, 153, 153, 0.7); */
+    /* background-color: blue; */
+    height: 335px;
+    width: 214.94px;
+    left: 41.3%;
+    top: 69.3%;
+}
+
+
+.stackerButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    font-size: 30px;
+    font-family: 'Exo';
+    color: white;
+    /* border: 1px solid black; */
+    padding: 90px 70px;
+    cursor: pointer;
+    font-weight: bolder;
+    font-style: oblique;
+}
+
+
+
+/* card flicking animation(Top Card placement) */
+#stackerimg2 {
+    z-index: 50;
+    position: relative;
+    bottom: 20px;
+    border: 3px solid rgb(153, 153, 153);
+    border-radius: 8px;
+    margin-top: 35px;
+    left: -5px;
+
+}
+
+/* card flicking animation */
+#stackerimg2.animated {
+    animation: bottomtotop .4s , rotation reverse .4s linear; 
+  }
+
+
+
+/* for the shaking animation */
+#stackerimg3.shakeonNegative {
+    animation: shake 0.4s;
+    left: 0%;
+    top: 0%;
+    /* right: 0%;
+    bottom: 0%; */
+}
+
+/* for the shaking image (below top card placement) */
+#stackerimg3 {
+    z-index: 48;
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid rgba(245, 245, 245, 0.74);
+    border-radius: 8px;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+  
+  @keyframes bottomtotop {
+   
+    from {
+      bottom: 0px;
+    }
+    to {
+      bottom: 720px;
+    } 
+  
+  
+  }
+  @-webkit-keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+  @-webkit-keyframes bottomtotop {
+    from {
+      bottom: 0px;
+    }
+    to {
+      bottom: 720px;
+    }
+  }
+
+
+
+    @-moz-keyframes rotation {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+  
+    @-moz-keyframes bottomtotop {
+      from {
+        bottom: 0px;
+      }
+      to {
+        bottom: 720px;
+      }
+    }
+
+    @-ms-keyframes rotation {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+  
+    @-ms-keyframes bottomtotop {
+      from {
+        bottom: 0px;
+      }
+      to {
+        bottom: 720px;
+      }
+    }
+ 
+
+
+
+    @keyframes shake {
+      0% { transform: translate(1px, 1px) rotate(0deg); }
+      10% { transform: translate(-1px, -2px) rotate(-1deg); }
+      20% { transform: translate(-3px, 0px) rotate(1deg); }
+      30% { transform: translate(3px, 2px) rotate(0deg); }
+      40% { transform: translate(1px, -1px) rotate(1deg); }
+      50% { transform: translate(-1px, 2px) rotate(-1deg); }
+      60% { transform: translate(-3px, 1px) rotate(0deg); }
+      70% { transform: translate(3px, 1px) rotate(-1deg); }
+      80% { transform: translate(-1px, -1px) rotate(1deg); }
+      90% { transform: translate(1px, 2px) rotate(0deg); }
+      100% { transform: translate(1px, -2px) rotate(-1deg); }
+    }    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.display2 {
+    position: relative;
+
+}
+
+
+
+.displayimg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+   
+    border: 3px solid rgba(245, 245, 245, 0.74);
+    z-index: 50;
+    background-color: black;
+}
+
+.display {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    font-size: 30px;
+    font-family: 'Exo';
+    color: white;
+    font-weight: bolder;
+    font-style: oblique;
+}
+
+
+
+
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #43464b;
+    margin: 20% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 5px solid rgba(255, 255, 255, 0.726);
+    width: 80%; /* Could be more or less, depending on screen size */
+    text-align: center;
+    color: white;
+    border-radius: 7px;
+    font-family: 'Exo';
+    font-size: 30px;
+    height: 200px;
+    position: relative;
+  }
+  
+  .buttonDiv {
+    position: absolute;
+    top: 59%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .replayButton {
+  position: relative;
+  display: block;
+  color: white;
+  font-size: 14px;
+  font-family: "Exo";
+  text-decoration: none;
+  margin: 30px 0;
+  border: 3px solid #e7cb2e;
+  padding: 14px 60px;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 1.3s all ease;
+  border-radius: 10px;
+  font-size: 20px;
+  font-style: oblique;
+  font-weight: bolder;
+
+  }
+
+
+  .replayButton::before {
+    background: rgb(31, 108, 153);
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    transition: all 0.6s ease;
+    width: 0%;
+    height: 100%;
+  }
+  
+  .replayButton:hover::before {
+    width: 100%;
+  }
+
+
+
+
+
+
+
+
+
+
+
